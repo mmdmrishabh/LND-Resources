@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgb(4, 4, 39) 0%, #03131f 100%);
+}
+
+div.mouse-gradient {
+    justify-content: center;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.mouse-gradient {
+    background-image: radial-gradient(#000, #0A3D62 20%, #0c2c56);
+    background-size: 200vmax 200vmax;
+    background-position: calc(var(--mouse-x) - 100vmax) calc(var(--mouse-y) - 100vmax);
+    transition: background-position 2s cubic-bezier(0, 0, 0, 1);
+    mix-blend-mode: lighten;
+}
+
+.mouse-gradient:nth-child(4) {
+    mix-blend-mode: difference;
+}
+
+
+.cart-container {
+    width: 80%;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    filter: drop-shadow(2px 4px 6px black);
+    border: 0.5px solid white;
+}
+
+.card-section {
+    padding: 2rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.products-container,
+.product-list {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    border-radius: 10px;
+    padding-bottom: 1rem;
+}
+
+
+button {
+    padding: 0.5rem 1rem;
+    background: #218F76;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+
+.product {
+    box-shadow: rgb(50 50 93 / 8%) 2px 2px 5px 1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    padding: 1.5rem 1rem;
+    border-radius: 10px;
+    display: grid;
+    row-gap: 1rem;
+    color: black;
+    padding: 1rem;
+}
+
+
+.cart-summary {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    padding: 1rem;
+}
+
+.bg-white {
+    background: white;
+}
+
+@media screen and (max-width:749px) {
+    .cart-container {
+        width: 100%;
+    }
+
+    .products-container,
+    .product-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
