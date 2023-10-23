@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="mouse-gradient">
+      <div class="cart-container card-section">
+        <h1 class="mb-1">Shopping Cart</h1>
+
+        <div class="my-products">
+          <center>My products</center>
+          <div class="products-container card-section">
+            <!-- Product List -->
+          </div>
+        </div>
+        <div class="my-cart">
+          <center>My cart</center>
+
+          <div class="product-list">
+            <!-- Product List -->
+          </div>
+        </div>
+        <div class="cart-summary card-section bg-white">
+          <p>Total Price: $<span id="total-price">0</span></p>
+          <button onclick="handleCheckout();" id="checkout-btn">
+            Checkout
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
